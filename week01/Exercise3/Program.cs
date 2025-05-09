@@ -6,6 +6,9 @@ class Program
     {
         Random randomGenerator = new Random();
 
+        //Note that I have purposesly not commented out the first guess from the user which is not inside the while loop
+        //as a result of that, it looks like our counter is off by one
+        
         //Console.Write("What is the magic number? ");
         //string userInput = Console.ReadLine();
         int magicNumber = randomGenerator.Next(1, 101);
