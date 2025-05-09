@@ -28,17 +28,19 @@ class Program
         }
 
         string playAgain = "";
-
+        
         while (playAgain != "no")
         {
+            int counter = 0;
             while (guess != magicNumber)
             {
+                counter += 1;
                 Console.Write("What is your guess? ");
                 userGuess = Console.ReadLine();
                 guess = int.Parse(userGuess);
                 if (guess == magicNumber)
                 {
-                    Console.WriteLine("You guessed it!");
+                    Console.WriteLine($"You guessed it right after {counter} guesses!");
                 }
                 else if (guess < magicNumber)
                 {
@@ -50,9 +52,12 @@ class Program
                 }
 
             }
+            // Prompt the user if they would like to play again
+            
             Console.WriteLine("Would you like to play again? (yes/no) ");
             playAgain = Console.ReadLine();
-            
+
+            // If they say yes, generate a new magic number and reset the guess variable
             if (playAgain == "yes")
             {
                 magicNumber = randomGenerator.Next(1, 101);
