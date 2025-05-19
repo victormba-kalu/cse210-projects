@@ -1,5 +1,5 @@
 using System;
-using System.Security.Cryptography.X509Certificates;
+
 
 public class Entry
 {
@@ -7,10 +7,13 @@ public class Entry
     public string _promptText;
     public string _entryText;
 
+    public PromptGenerator _promptGenerator = new PromptGenerator();
+
     public void Display()
     {
         Console.WriteLine($"Date: {_date}");
         Console.WriteLine($"Prompt: {_promptText}");
         Console.WriteLine($"Entry: {_entryText}");
+        Console.WriteLine();
     }
 }
