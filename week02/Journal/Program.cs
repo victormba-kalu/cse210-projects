@@ -1,3 +1,6 @@
+//To exceed requirements, I have added an addditional information to store the time of the entry. 
+//I also added the option to overwrite the entries list when loading a new one.
+//I also added more prompts to the prompt generator.
 using System;
 
 class Program
