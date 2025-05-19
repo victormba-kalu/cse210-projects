@@ -10,6 +10,8 @@ class Program
         int choice = 0;
         while (choice != 5)
         {
+            Console.WriteLine();
+            Console.WriteLine("===================================");
             Console.WriteLine("Welcome to the Journal Program!");
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
@@ -23,6 +25,7 @@ class Program
             {
                 anEntry = new Entry();
                 anEntry._date = DateTime.Now.ToShortDateString();
+                anEntry._time = DateTime.Now.ToString("HH:mm tt");
                 anEntry._promptText = anEntry._promptGenerator.GetRandomPrompt();
                 Console.WriteLine(anEntry._promptText);
                 Console.Write("> ");
