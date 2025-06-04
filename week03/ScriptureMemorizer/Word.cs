@@ -11,6 +11,7 @@ namespace ScriptureMemorizer
         // Constructor: Initializes the word text and sets its initial visibility to true (shown).
         public Word(string text)
         {
+            // I use the "throw new ArgumentNullException..." to make sure that my word object is not created in an invalid state
             _text = text ?? throw new ArgumentNullException(nameof(text), "Word text cannot be null.");
             _isHidden = false; // By default, a new word is visible
         }

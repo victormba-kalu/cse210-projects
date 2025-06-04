@@ -90,6 +90,8 @@ namespace ScriptureMemorizer
 
                 else
                 {
+                    // After the user enters invalid input, I need the program to pause and briefly show them this message
+                    // Before console.clear clears the screen
                     Console.WriteLine("Invalid input. Please press Enter or type 'quit'.");
                     System.Threading.Thread.Sleep(1000);
                 }
