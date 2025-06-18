@@ -1,17 +1,28 @@
-public class Rectangle : Shape
+using System;
+
+class Program
 {
-    private double _length;
-    private double _width;
-
-    public Rectangle(string color, double length, double width) : base (color)
+    static void Main(string[] args)
     {
-        _length = length;
-        _width = width;
-    }
+      
+        List<Shape> shapes = new List<Shape>();
 
-    // Notice the use of the override keyword here
-    public override double GetArea()
-    {
-        return _length * _width;
+        Square s1 = new Square("Red", 3);
+        shapes.Add(s1);
+
+        Rectangle s2 = new Rectangle("Blue", 4, 5);
+        shapes.Add(s2);
+
+        Circle s3 = new Circle("Green", 6);
+        shapes.Add(s3);
+
+        foreach (Shape s in shapes)
+        {
+           
+            string color = s.GetColor();
+
+            double area = s.GetArea();
+            Console.WriteLine($"The {color} shape has an area of {area}.");
+        }
     }
 }
